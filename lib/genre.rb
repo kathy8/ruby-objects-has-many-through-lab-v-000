@@ -10,12 +10,12 @@ GENRE = []
   def initialize(name)
     @name = name
     @songs = []
-    GENRE << self.name 
+    GENRE << self.name
   end
 
-  def songs 
+  def songs
     @songs
-  end 
+  end
 
   def add_song(song)
     songs << song
