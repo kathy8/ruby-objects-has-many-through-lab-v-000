@@ -7,5 +7,5 @@ def initialize(date, doctor)
   self.doctor.add_appoinment(self)
 end
 end
-#848
+
 
