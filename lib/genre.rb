@@ -22,6 +22,6 @@ GENRE = []
   end
 
   def artists
-    seld.songs.collect {|song| song.artist}
+    self.songs.collect {|song| song.artist}
   end
 end
