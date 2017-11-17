@@ -7,13 +7,12 @@
 #to know about songs. You'll need to create a Genre#add_song method.
 #Let's come back to this in a minute.
 class Song
-  attr_accessor :name, :artist
-  attr_reader :genre
+  attr_accessor :name, :artist, :genre
 
   def initialize(name, genre)
     @name = name
     @genre = genre
-    self.genre.add_song(self)
+    genre.add_song(self)
   end
 end
  
