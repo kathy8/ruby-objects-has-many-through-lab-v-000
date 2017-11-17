@@ -10,7 +10,8 @@
 #that iterates over that artist's songs and collects the genre of each song.
 
 class Artist
-  attr_accessor :name, :songs
+  attr_accessor :name
+  attr_reader :songs
 
   def initialize(name)
     @name = name
@@ -24,6 +25,6 @@ def add_song(song)
 end
 
 def genres
-  @songs.collect{ |song| song.genre }
+self.songs.collect {|song| song.genre}
 end
 end
