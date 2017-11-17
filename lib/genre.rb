@@ -5,22 +5,25 @@
 #The Genre class needs an instance method, #artists, that iterates over the genre's collection of songs and collects the artist that owns each song.
 class Genre
   attr_accessor :name
-  attr_reader :artist, :songs
+GENRE = []
 
   def initialize(name)
     @name = name
     @songs = []
+    GENRE << self.name 
   end
+
+  def songs 
+    @songs
+  end 
 
   def add_song(song)
-    self.songs << song
+    songs << song
   end
 
-  def songs
-    @songs
-  end
+
 
   def artists
-    @songs.collect{ |song| song.artist }
+    seld.songs.collect {|song| song.artist}
   end
 end
