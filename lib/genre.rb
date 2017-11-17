@@ -3,7 +3,7 @@
 #The Genre class needs an instance method, #add_song, that takes in an argument of a song and adds that song to the genre's collection of songs. Now you can use the Genre#add_song method in the Song class' initialize method to tell the genre that it owns the given song.
 #The Genre class needs an instance method, #songs, that returns the @songs array.
 #The Genre class needs an instance method, #artists, that iterates over the genre's collection of songs and collects the artist that owns each song.
-class Genre 
+class Genre
   attr_accessor :name
   attr_reader :artist, :songs
 
@@ -23,5 +23,4 @@ class Genre
   def artists
     @songs.collect{ |song| song.artist }
   end
-end 
-
+end
