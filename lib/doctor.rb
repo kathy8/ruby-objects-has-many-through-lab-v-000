@@ -5,20 +5,21 @@
 #The Doctor class needs an instance method, #patients, that iterates over that doctor's appointments and collects the patient that belongs to each appointment.
 
 class Doctor
-  attr_accessor :name, :appointments
+  attr_accessor :name, :patient
+  attr_reader :appointments
 
   def initialize(name)
     @name = name
     @appoinments = []
     end
 
-    def add_appointment(app)
-      @appointments << app
-      app.doctor = self
+    def add_appointment(appointment)
+      @appointments << appoinment
+      appointment.doctor = self
     end
 
     def patients
-    self.appointments.collect{ |app| app.patient }
+    self.appointments.collect{ |appointments| appoinment.patient}
    end
 
    end
