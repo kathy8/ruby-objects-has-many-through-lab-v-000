@@ -18,10 +18,8 @@ GENRE = []
   end
 
   def add_song(song)
-    songs << song
+    @songs << song
   end
-
-
 
   def artists
     seld.songs.collect {|song| song.artist}
