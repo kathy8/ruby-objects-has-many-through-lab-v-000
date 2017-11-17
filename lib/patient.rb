@@ -8,7 +8,7 @@ class Patient
 
   def initialize(name)
     @name = name
-    @appointments == []
+    @appointments = []
   end
 
   def add_appointment(app)
@@ -18,6 +18,6 @@ class Patient
 
 
   def doctors
-  self.appointments.collect{ |app| app.doctor }
+  self.appointments.collect{ |app| app.patient }
   end
   end
