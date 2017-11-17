@@ -6,13 +6,14 @@
 
 class Doctor
   attr_accessor :name, :appointments
+
   def initialize(name)
     @name = name
-    @appoinments << if __FILE__ == $PROGRAM_NAME
+    @appoinments = []
     end
 
     def add_appointment(app)
-      @appointments << self
+      @appointments << app
       app.doctor = self
     end
 
